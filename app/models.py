@@ -21,8 +21,20 @@ class Base(models.Model):
         verbose_name = "Базовая модель "
         verbose_name_plural = "Базовые модели"
 
-        
-class InsuranceCompany(models.Model):
-    policy_number = models.CharField(verbose_name='Номер СП', max_length=255)
-    type_of_insurance = models.CharField(max_length=13, choices=TYPES, verbose_name="Тип страхования")
+
+class InsuranceCompany(Base):
+    title = models.CharField(max_length=255, verbose_name='Наименование')
+    phone = models.CharField(max_length=20, verbose_name='Телефон')
     
+    class Meta:
+        verbose_name = "Страховая компания"
+        verbose_name_plural = "Страховые компании"
+        
+        
+class InsuranceData(Base):
+    policy_number = models.CharField(verbose_name='Номер СП', max_length=255)
+    format_number = models.CharField(verbose_name='Формат СП', default=None, max_length=255)
+    type_of_insurance = models.CharField(max_length=4, choices=TYPES, verbose_name="Тип страхования")
+    expiration_date = models.DateField(verbose_name='Дата окончания')
+    company = models.ForeignKey(InsuranceCompany, on_delete=models.CASCADE)
+
