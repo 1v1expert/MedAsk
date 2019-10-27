@@ -1,7 +1,6 @@
-
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="MedAsk">
@@ -14,13 +13,11 @@
 
     <!-- Bootstrap core CSS -->
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
     <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/base/jquery-ui.css">
-
-
 
 
     <!-- <link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/start/jquery-ui.min.css" rel="stylesheet"> -->
@@ -28,160 +25,168 @@
     <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js-bootstrap-css/1.2.1/typeaheadjs.css"> -->
     <!-- Custom styles for this template -->
     <!-- <link href="form-validation.css" rel="stylesheet"> -->
-  </head>
-  <style> 
+</head>
+<style>
     .form-rounded {
-border-radius: 1rem;
-}
+        border-radius: 1rem;
+    }
 </style>
 
-  <body class="bg-light">
-    
-    <div class="container">
-      <div class="col-md-8 offset-md-2">
-      <div class="py-5 text-center">
-        <!-- <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
-        <h3>Проверка услуг медицинского страхования</h3>
-        <!-- <p class="lead">Below is an example form built entirely with Bootstrap's form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p> -->
-      </div>
+<body class="bg-light">
 
-      <div class="row">
-        
-        <!-- <div class="col-md-12 order-md-1">
-          <div class="row">
-        
-            </div> -->
-          <!-- </div> -->
-        <div class="col-md-12 order-md-1">
-          <!-- <h4 class="mb-3">Billing address</h4> -->
-          <form class="needs-validation" validate>
-            <div class="row text-center">
-              <div class="col-md-12 ml-auto pb-4">
-              <div class="btn-group mr-2 ">
-                <button class="btn btn-outline-danger" type="button" id="OMS">ОМС</button>
-                <button class="btn btn-danger" type="button" id="DMS">ДМС</button>
-              </div>
-            </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <!-- <label for="firstName">First name</label> -->
-                <input type="text" class="form-control form-rounded" id="policyNumber" placeholder="Введите номер полиса" value="" required>
-                <div class="invalid-feedback" id="expiration_date">
-                  Дата окончания 14.08.2020 г.
-                </div>
-              </div>
-              <div class="col-md-6 mb-3">
-                <!-- <label for="lastName">Last name</label> -->
-                <input class="typeahead form-control form-rounded" id="autocomplete" placeholder="Выберите страховую компанию" style="text-indent: 25px;" type="text">
-                <!-- <input type="text" class="form-control form-rounded" id="insuranceCompanies" placeholder="Выберите страховую компанию" value="" required> -->
-                <div class="invalid-feedback" id="phone">
-                  Телефон 8 (495) 123-45-67
-                </div>
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="address">Выберите медицинские услуги</label>
-              <input type="text" class="form-control form-rounded" id="services" placeholder="Введите запрашиваемую услугу для пациента" required>
-<!--               <div class="invalid-feedback" id="">
-                Please enter your shipping address.
-              </div> -->
-            </div>
-            <div class="text-center">
-            <button class="btn  btn-outline-danger form-rounded" type="submit">Проверить</button>
-          </div>
-          </form>
+<div class="container">
+    <div class="col-md-8 offset-md-2">
+        <div class="py-5 text-center">
+            <!-- <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
+            <h3>Проверка услуг медицинского страхования</h3>
+            <!-- <p class="lead">Below is an example form built entirely with Bootstrap's form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p> -->
         </div>
-      </div>
 
-      <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">&copy; 2019 VLADDOS</p>
-      </footer>
+        <div class="row">
+
+            <!-- <div class="col-md-12 order-md-1">
+              <div class="row">
+
+                </div> -->
+            <!-- </div> -->
+            <div class="col-md-12 order-md-1">
+                <!-- <h4 class="mb-3">Billing address</h4> -->
+                <form class="needs-validation" validate>
+                    <div class="row text-center">
+                        <div class="col-md-12 ml-auto pb-4">
+                            <div class="btn-group mr-2 ">
+                                <button class="btn btn-outline-danger" type="button" id="OMS">ОМС</button>
+                                <button class="btn btn-danger" type="button" id="DMS">ДМС</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <!-- <label for="firstName">First name</label> -->
+                            <input type="text" class="form-control form-rounded" id="policyNumber"
+                                   placeholder="Введите номер полиса" value="" required>
+                            <div class="invalid-feedback" id="expiration_date">
+                                Дата окончания 14.08.2020 г.
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <!-- <label for="lastName">Last name</label> -->
+                            <input class="typeahead form-control form-rounded" id="autocomplete"
+                                   placeholder="Выберите страховую компанию" style="text-indent: 25px;" type="text">
+                            <!-- <input type="text" class="form-control form-rounded" id="insuranceCompanies" placeholder="Выберите страховую компанию" value="" required> -->
+                            <div class="invalid-feedback" id="phone">
+                                Телефон 8 (495) 123-45-67
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="address">Выберите медицинские услуги</label>
+                        <input type="text" class="form-control form-rounded" id="services"
+                               placeholder="Введите запрашиваемую услугу для пациента" required>
+                        <!--               <div class="invalid-feedback" id="">
+                                        Please enter your shipping address.
+                                      </div> -->
+                    </div>
+                    <div class="text-center">
+                        <button class="btn  btn-outline-danger form-rounded" type="submit">Проверить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">&copy; 2019 VLADDOS</p>
+        </footer>
     </div>
-  </div>
+</div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-   <!--  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-      
-    </script> -->
-    <!-- <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> -->
-    <!-- <script src="../../assets/js/vendor/popper.min.js"></script> -->
-    
-    <!-- Bootstrap CDN | JS, Popper.js и jQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!--  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script
-  src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"
-  integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk="
-  crossorigin="anonymous"></script>
-    <!-- Javascript -->
-      <script>
-         $(function() {
-            var projects = [
-               {
+ </script> -->
+<!-- <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> -->
+<!-- <script src="../../assets/js/vendor/popper.min.js"></script> -->
+
+<!-- Bootstrap CDN | JS, Popper.js и jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script
+        src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"
+        integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk="
+        crossorigin="anonymous"></script>
+<!-- Javascript -->
+<script>
+    $(function () {
+        var projects = [
+            {
                 img: "img/light-bulb.png",
-                  value: "СК МЕД-АСКЕР",
-                  phone: "8 (495) 123-45-67",
-                  // label: "Java",
-                  desc: "write once run anywhere",
-               },
-               {
+                value: "СК МЕД-АСКЕР",
+                phone: "8 (495) 123-45-67",
+                // label: "Java",
+                desc: "write once run anywhere",
+            },
+            {
                 img: "img/Logo.png",
-                  value: "СК Рандеву",
-                  phone: "8 (499) 123-45-68",
-                  // label: "jQuery UI",
-                  desc: "the official user interface library for jQuery",
-               },
-               {
+                value: "СК Рандеву",
+                phone: "8 (499) 123-45-68",
+                // label: "jQuery UI",
+                desc: "the official user interface library for jQuery",
+            },
+            {
                 img: "img/swap-vertical-orientation-arrows_1.png",
-                  value: "Страх-трах",
-                  phone: "8 (812) 123-45-69",
-                  // label: "Twitter Bootstrap",
-                  desc: "popular front end frameworks ",
-               }
-            ];
-            $( "#autocomplete" ).autocomplete({
-               minLength: 0,
-               source: projects,
-               focus: function( event, ui ) {
-                  $( "#project" ).val( ui.item.label );
-                     return false;
-               },
-               select: function( event, ui ) {
-                $( "#autocomplete" ).val(ui.item.label)
-                .css('background', 'url(' + ui.item.img + ') no-repeat scroll 7px 7px');
-                  return false;
-               }
-            })
-        
-            .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
-               return $( "<li>" )
-               .append("<a> <img src='" + item.img + "'>   " + item.label + "</a>")
-               // .append( "<a>" + item.label + "<br>" + item.desc + "</a>" )
-               .appendTo( ul );
-            };
-         });
+                value: "Страх-трах",
+                phone: "8 (812) 123-45-69",
+                // label: "Twitter Bootstrap",
+                desc: "popular front end frameworks ",
+            }
+        ];
+        $("#autocomplete").autocomplete({
+            minLength: 0,
+            source: projects,
+            focus: function (event, ui) {
+                $("#project").val(ui.item.label);
+                return false;
+            },
+            select: function (event, ui) {
+                $("#autocomplete").val(ui.item.label)
+                    .css('background', 'url(' + ui.item.img + ') no-repeat scroll 7px 7px');
+                return false;
+            }
+        })
 
-            $("#OMS").click(function(e){
-              $(this).removeClass('btn-outline-danger').addClass('btn-danger')
-              $("#DMS").addClass('btn-outline-danger').removeClass('btn-danger')
-            })
-            $("#DMS").click(function(){
-              $(this).removeClass('btn-outline-danger').addClass('btn-danger')
-              $("#OMS").addClass('btn-outline-danger').removeClass('btn-danger')
-            })
+            .data("ui-autocomplete")._renderItem = function (ul, item) {
+            return $("<li>")
+                .append("<a> <img src='" + item.img + "'>   " + item.label + "</a>")
+                // .append( "<a>" + item.label + "<br>" + item.desc + "</a>" )
+                .appendTo(ul);
+        };
+    });
 
-            $("#policyNumber").keypress(function (e)  
-            { 
-              console.log("keypress");
-              // $("#errmsg").html($("#quantity").val());
-            });
-      </script>
-  </body>
+    $("#OMS").click(function (e) {
+        $(this).removeClass('btn-outline-danger').addClass('btn-danger')
+        $("#DMS").addClass('btn-outline-danger').removeClass('btn-danger')
+    });
+    $("#DMS").click(function () {
+        $(this).removeClass('btn-outline-danger').addClass('btn-danger')
+        $("#OMS").addClass('btn-outline-danger').removeClass('btn-danger')
+    });
+
+    $("#policyNumber").keypress(function (e) {
+        console.log("keypress");
+        // $("#errmsg").html($("#quantity").val());
+    });
+</script>
+</body>
 </html>
