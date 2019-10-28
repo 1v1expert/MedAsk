@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -29,6 +30,9 @@
 <style>
     .form-rounded {
         border-radius: 1rem;
+    }
+    .invalid-feedback {
+        color: unset;
     }
 </style>
 
@@ -128,30 +132,24 @@
         crossorigin="anonymous"></script>
 <!-- Javascript -->
 <script>
+    var projects = [
+        {
+            img: "{% static 'img/light-bulb.png' %}",
+            value: "СК МЕД-АСКЕР",
+            phone: "8 (495) 123-45-67",
+        },
+        {
+            img: "{% static 'img/Logo.png' %}",
+            value: "СК Рандеву",
+            phone: "8 (499) 123-45-68",
+        },
+        {
+            img: "{% static 'img/swap-vertical-orientation-arrows_1.png' %}",
+            value: "Страх-трах",
+            phone: "8 (812) 123-45-69",
+        }
+    ];
     $(function () {
-        var projects = [
-            {
-                img: "img/light-bulb.png",
-                value: "СК МЕД-АСКЕР",
-                phone: "8 (495) 123-45-67",
-                // label: "Java",
-                desc: "write once run anywhere",
-            },
-            {
-                img: "img/Logo.png",
-                value: "СК Рандеву",
-                phone: "8 (499) 123-45-68",
-                // label: "jQuery UI",
-                desc: "the official user interface library for jQuery",
-            },
-            {
-                img: "img/swap-vertical-orientation-arrows_1.png",
-                value: "Страх-трах",
-                phone: "8 (812) 123-45-69",
-                // label: "Twitter Bootstrap",
-                desc: "popular front end frameworks ",
-            }
-        ];
         $("#autocomplete").autocomplete({
             minLength: 0,
             source: projects,
@@ -175,7 +173,7 @@
     });
 
     $("#OMS").click(function (e) {
-        $(this).removeClass('btn-outline-danger').addClass('btn-danger')
+        $(this).removeClass('btn-outline-danger').addClass('btn-danger');
         $("#DMS").addClass('btn-outline-danger').removeClass('btn-danger')
     });
     $("#DMS").click(function () {
@@ -183,8 +181,39 @@
         $("#OMS").addClass('btn-outline-danger').removeClass('btn-danger')
     });
 
-    $("#policyNumber").keypress(function (e) {
-        console.log("keypress");
+    $("#policyNumber").keydown(function (e) {
+        $.ajax({
+            type: "POST",
+            url: "{% url 'check_policy' %}",
+            data: JSON.stringify({'policy_number': $("#policyNumber").val()}),
+            success: function (response) {
+                // console.log('response', response)
+                // var json_response = JSON.parse(response)
+                if (response.OK) {
+                    // $( ".autocomplete" ).autocomplete( "destroy" );
+                    $("#autocomplete").val(response.result.company_title);
+                    $("#phone").val(response.result.company_phone);
+                    $("#expiration_date").val(' Дата окончания ' + response.result.expiration_date + ' г.');
+                    $(".invalid-feedback").css('display', 'block');
+                    if (response.result.type_of_insurance === 'dms')
+                    {
+                        $("#DMS").removeClass('btn-outline-danger').addClass('btn-danger');
+                        $("#OMS").addClass('btn-outline-danger').removeClass('btn-danger')
+                    }
+                    else {
+                        $("#OMS").removeClass('btn-outline-danger').addClass('btn-danger');
+                        $("#DMS").addClass('btn-outline-danger').removeClass('btn-danger')
+                    }
+                }
+                else {
+                    $(".invalid-feedback").css('display', 'none');
+                    $("#autocomplete").val('');
+                }
+            },
+            error: function (response) {
+                console.log('error', response)
+            }
+        })
         // $("#errmsg").html($("#quantity").val());
     });
 </script>

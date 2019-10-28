@@ -29,7 +29,10 @@ class InsuranceCompany(Base):
     class Meta:
         verbose_name = "Страховая компания"
         verbose_name_plural = "Страховые компании"
-        
+    
+    def __str__(self):
+        return self.title
+
         
 class InsuranceData(Base):
     policy_number = models.CharField(verbose_name='Номер СП', max_length=255)
@@ -37,4 +40,17 @@ class InsuranceData(Base):
     type_of_insurance = models.CharField(max_length=4, choices=TYPES, verbose_name="Тип страхования")
     expiration_date = models.DateField(verbose_name='Дата окончания')
     company = models.ForeignKey(InsuranceCompany, on_delete=models.CASCADE)
-
+    
+    def to_json(self):
+        return dict(
+            type_of_insurance=self.type_of_insurance,
+            expiration_date=self.expiration_date,
+            company_title=self.company.title,
+            company_phone=self.company.phone
+        )
+    
+    class Meta:
+        verbose_name = "Данные по СК"
+    
+    def __str__(self):
+        return 'Policy number: {}'.format(self.policy_number)

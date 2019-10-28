@@ -23,42 +23,42 @@ companies = [
 company_data = [
     {
         'policy_number': '1234 12345678',
-        'format_number': '1111011111111',
+        'format_number': '4 8',
         'type_of_insurance': DMS,
         'expiration_date': '14.08.2020',
         'company': 'СК МЕД-АСКЕР'
     },
     {
         'policy_number': '9876 543210',
-        'format_number': '11110111111',
+        'format_number': '4 6',
         'type_of_insurance': OMS,
         'expiration_date': '15.08.2021',
         'company': 'СК МЕД-АСКЕР'
     },
     {
         'policy_number': '1234-123456-78',
-        'format_number': '11110111111011',
+        'format_number': '4-6-2',
         'type_of_insurance': DMS,
         'expiration_date': '16.08.2022',
         'company': 'СК Рандеву'
     },
     {
         'policy_number': '98-76 5432-10',
-        'format_number': '1101101111011',
+        'format_number': '2-2 4-2',
         'type_of_insurance': OMS,
         'expiration_date': '24.11.2023',
         'company': 'СК Рандеву'
     },
     {
         'policy_number': '12-341234-5678',
-        'format_number': '11011111101111',
+        'format_number': '2-6-4',
         'type_of_insurance': DMS,
         'expiration_date': '25.11.2024',
         'company': 'Страх-трах'
     },
     {
         'policy_number': '9876-543210',
-        'format_number': '11110111111',
+        'format_number': '4-6',
         'type_of_insurance': OMS,
         'expiration_date': '26.11.2025',
         'company': 'Страх-трах'
