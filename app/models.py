@@ -25,6 +25,7 @@ class Base(models.Model):
 class InsuranceCompany(Base):
     title = models.CharField(max_length=255, verbose_name='Наименование')
     phone = models.CharField(max_length=20, verbose_name='Телефон')
+    cover = models.ImageField(upload_to='images/', null=True)
     
     class Meta:
         verbose_name = "Страховая компания"
@@ -46,7 +47,8 @@ class InsuranceData(Base):
             type_of_insurance=self.type_of_insurance,
             expiration_date=self.expiration_date,
             company_title=self.company.title,
-            company_phone=self.company.phone
+            company_phone=self.company.phone,
+            img=self.company.cover.url
         )
     
     class Meta:

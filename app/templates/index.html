@@ -187,11 +187,13 @@
             url: "{% url 'check_policy' %}",
             data: JSON.stringify({'policy_number': $("#policyNumber").val()}),
             success: function (response) {
+                console.log(response)
                 // console.log('response', response)
                 // var json_response = JSON.parse(response)
                 if (response.OK) {
                     // $( ".autocomplete" ).autocomplete( "destroy" );
-                    $("#autocomplete").val(response.result.company_title);
+                    $("#autocomplete").val(response.result.company_title)
+                    .css('background', 'url(' + response.result.img + ') no-repeat scroll 7px 7px');
                     $("#phone").val(response.result.company_phone);
                     $("#expiration_date").val(' Дата окончания ' + response.result.expiration_date + ' г.');
                     $(".invalid-feedback").css('display', 'block');
