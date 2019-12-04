@@ -31,11 +31,7 @@ def api_check_policy_number(request) -> HttpResponse:
                 return JsonResponse({"OK": False}, content_type='application/json')
             # return JsonResponse(
             #     {"results": list(InsuranceData.objects.values('type_of_insurance',
-            #                                                   'expiration_date',
-            #                                                   'company__title',
-            #                                                   'company__phone'))}, content_type='application/json')
-        # body = str(request.body)
-        # print(body)
+
         return JsonResponse({"OK": False}, content_type='application/json')
         
     return HttpResponseNotAllowed()
