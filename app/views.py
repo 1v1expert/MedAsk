@@ -26,13 +26,11 @@ def api_check_policy_number(request) -> HttpResponse:
             
             try:
                 insurance = InsuranceData.objects.get(format_number=format_policy)
-                return JsonResponse({"OK": True, 'result': insurance.to_json()}, content_type='application/json')
+                return JsonResponse({"OK": True, 'result': insurance.to_json()},)
             except (InsuranceData.DoesNotExist, InsuranceData.MultipleObjectsReturned):
-                return JsonResponse({"OK": False}, content_type='application/json')
-            # return JsonResponse(
-            #     {"results": list(InsuranceData.objects.values('type_of_insurance',
+                return JsonResponse({"OK": False})
 
-        return JsonResponse({"OK": False}, content_type='application/json')
+        return JsonResponse({"OK": False})
         
     return HttpResponseNotAllowed()
 
